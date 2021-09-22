@@ -59,6 +59,10 @@ export default function GlobalStyles() {
 
         /* DEFAULTS */
         /* LAYOUT */
+        body {
+          background: var(--black);
+          color: var(--white);
+        }
         body * {
           font-family: var(--font-a)!important;
         }
@@ -80,7 +84,6 @@ export default function GlobalStyles() {
           padding: 0 var(--space-md);
           a {
             text-decoration: none;
-            color: var(--black);
             &.active {
               text-decoration: underline;
             }
@@ -109,6 +112,7 @@ export default function GlobalStyles() {
           padding: var(--space-sm) 0;
         }
         a {
+          color: inherit;
           font-weight: 400;
         }
         p,ol,ul {
@@ -116,6 +120,9 @@ export default function GlobalStyles() {
           padding-bottom: var(--space-sm);
           line-height: 1.35;
           font-weight: 400;
+        }
+        .error {
+          color: red;
         }
 
         /* CUSTOM */
@@ -155,6 +162,9 @@ export default function GlobalStyles() {
             ${buttonStyle};
             margin-bottom: 15px;
           }
+        }
+        .zora--auction-house-modalInner {
+          color: #000;
         }
       `}
     />

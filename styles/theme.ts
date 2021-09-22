@@ -3,16 +3,11 @@ import * as mixins from './mixins'
 
 export const mediaConfigurationStyles = {
   theme: {
-    /*
     lineSpacing: 20,
-    linkColor: 'var(--black)',
-    borderStyle: '1px solid var(--black)',
     defaultBorderRadius: 0,
     maximumPricingDecimals: 2,
-    */
   },
   styles: {
-    /*
     fullMediaWrapper: () => css`
       margin: 0;
       position: relative;
@@ -71,7 +66,6 @@ export const mediaConfigurationStyles = {
       padding: var(--base-unit) 0;
     `,
     fullLabel: () => css`
-      color: var(--black);
       font-family: var(--font-b)!important;
       text-transform: uppercase;
       font-size: var(--text-03);
@@ -91,7 +85,6 @@ export const mediaConfigurationStyles = {
       padding-top: 5px;
     `,
     fullPageHistoryItemDatestamp: () => css`
-      color: var(--black);
       font-size: var(--text-01);
       padding-top: 5px;
     `,
@@ -126,7 +119,7 @@ export const mediaConfigurationStyles = {
           text-align: center;
         }
         ${mixins.media.tablet`
-          justify-content: space-between;
+        justify-content: space-between;
           flex-direction: row;
         `}
         ${mixins.media.laptop`
@@ -138,12 +131,15 @@ export const mediaConfigurationStyles = {
       margin: 0 0 var(--space-md);
     `,
     cardItemInfo: () => css`
-      padding: var(--space-sm) var(--space-sm) 0;
+      padding: 0 var(--space-sm) var(--space-sm);
       display: flex;
       justify-content: center;
       font-size: 0.9em;
       * {
         text-align: center;
+      }
+      .zora-cardTitle {
+        display: none;
       }
     `,
     fullPageHistoryItemDescription: () => css`
@@ -153,12 +149,13 @@ export const mediaConfigurationStyles = {
       width: 100%;
       position: relative;
       height: 0;
-      padding-bottom: 100%;
+      padding-bottom: 130%;
       overflow-y: visible;
       img {
         ${mixins.absoluteFullCentered};
-        object-fit: cover;
+        object-fit: contain;
+        padding: 16px;
       }
-    `*/
+    `
   }
 }

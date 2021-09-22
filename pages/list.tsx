@@ -179,6 +179,9 @@ const ListWrapper = styled(PageWrapper)`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    .zora-cardOuter {
+      background: none;
+    }
   }
   .owned-list-no-tokens {
     text-align: center;

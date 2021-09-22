@@ -17,9 +17,6 @@ export default function MarkdownWrapper({
       css={[
         css`
           width: 100%;
-          * {
-            color: var(--black);
-          }
           h2,
           h3,
           h4 {
