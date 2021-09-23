@@ -24,6 +24,7 @@ const Head = ({ title, description, url, ogImage }: HeadProps) => (
     <meta property="og:title" content={title || ''} />
     <meta property="og:description" content={description || defaultDescription} />
     <meta name="twitter:site" content={url || defaultOGURL} />
+    <meta name="twitter:text:title" content={title || ''} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={ogImage || defaultOGImage} />
     <meta property="og:image" content={ogImage || defaultOGImage} />
