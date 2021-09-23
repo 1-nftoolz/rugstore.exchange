@@ -1,4 +1,5 @@
 import Head from '../components/head'
+import { Header } from "../components/Header";
 import readMe from '../README.md'
 
 import Markdown from '../components/Markdown'
@@ -8,6 +9,7 @@ export default function About() {
   return (
     <>
       <Head title={'About'} />
+      <Header />
       <PageWrapper>
         <Markdown markdown={readMe}/>
       </PageWrapper> 

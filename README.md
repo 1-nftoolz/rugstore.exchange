@@ -1,6 +1,4 @@
-# RUGSTORE
-
-The real NTF.
+NTF.
 
 <https://broken-sea-4853.on.fleek.co/>
 
