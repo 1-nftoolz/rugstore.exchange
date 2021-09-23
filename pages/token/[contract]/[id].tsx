@@ -36,7 +36,7 @@ export default function Piece({
   return (
     <>
       <Head
-        title={`${name} | ${APP_TITLE}`}
+        title={`${name}`}
         description={description}
         ogImage={image}
       />
