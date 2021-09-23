@@ -71,6 +71,7 @@ export const mediaConfigurationStyles = {
       font-size: var(--text-03);
       margin-bottom: 4px;
       opacity: 0.6;
+      letter-spacing: 0.1em;
     `,
     infoContainer: () => css`
       padding: var(--space-sm);

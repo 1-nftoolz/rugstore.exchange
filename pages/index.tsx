@@ -1,9 +1,10 @@
 import styled from "@emotion/styled";
 import Head from "../components/head";
 import { PageWrapper } from "../styles/components";
+import { Header } from "../components/Header";
 import { GetStaticProps } from "next";
-
 import { AuctionsList } from "../components/AuctionsList";
+import sortBy from 'lodash/sortBy'
 
 import {
   FetchStaticData,
@@ -12,11 +13,26 @@ import {
 } from "@zoralabs/nft-hooks";
 
 export default function Home({ tokens }: { tokens: any }) {
+  const liveAuctions = tokens.filter(({nft}) => nft.auctionData)
+  const theRest = tokens.filter(t => !liveAuctions.includes(t))
+
+  const archive = tokens
+
   return (
     <IndexWrapper>
       <Head />
+      <Header />
       <h1>{process.env.NEXT_PUBLIC_APP_TITLE}</h1>
-      <AuctionsList tokens={tokens} />
+      <h2>Live now</h2>
+      <AuctionsList tokens={liveAuctions} />
+      {false && 
+        <>
+          <h2>Ended</h2>
+          <AuctionsList tokens={liveAuctions} />
+        </>
+      }
+      <h2>Rug archive</h2>
+      <AuctionsList tokens={archive} />
     </IndexWrapper>
   );
 }

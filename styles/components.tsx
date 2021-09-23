@@ -6,7 +6,7 @@ export const PageWrapper = styled.section`
   max-width: var(--content-width-md);
   position: relative;
   padding:
-    var(--space-sm)
+    0
     var(--space-sm)
     var(--space-lg);
 `

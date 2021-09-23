@@ -18,6 +18,7 @@ import useSWR from "swr";
 
 import Head from "../components/head";
 import { PageWrapper } from "./../styles/components";
+import { Header } from "../components/Header";
 
 const ListItemComponent = () => {
   const {
@@ -156,22 +157,25 @@ export default function List() {
   return (
     <>
       <Head title="List" />
-      <AuctionManager
-        renderMedia={MediaThumbnailPreview}
-        strings={{
-          LIST_MEDIA_HEADER: "List your NFT",
-          LIST_MEDIA_DESCRIPTION: `Set the reserve price to list your NFT on ${process.env.NEXT_PUBLIC_APP_TITLE}`,
-        }}
-      >
-        <ListWrapper>
-          <ConnectWallet />
-          {account &&
-            <div className="owned-list">
-              <RenderOwnedList account={account} />
-            </div>
-          }
-        </ListWrapper>
-      </AuctionManager>
+      <Header />
+      <main>
+        <AuctionManager
+          renderMedia={MediaThumbnailPreview}
+          strings={{
+            LIST_MEDIA_HEADER: "List your NFT",
+            LIST_MEDIA_DESCRIPTION: `Set the reserve price to list your NFT on ${process.env.NEXT_PUBLIC_APP_TITLE}`,
+          }}
+        >
+          <ListWrapper>
+            <ConnectWallet />
+            {account &&
+              <div className="owned-list">
+                <RenderOwnedList account={account} />
+              </div>
+            }
+          </ListWrapper>
+        </AuctionManager>
+      </main>
     </>
   );
 }

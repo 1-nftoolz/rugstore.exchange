@@ -1,5 +1,6 @@
 import '../styles/reset.css'
 
+import Router from 'next/router'
 import type { AppProps } from 'next/app'
 import { css } from '@emotion/css'
 
@@ -9,8 +10,14 @@ import { Web3ConfigProvider } from '@zoralabs/simple-wallet-provider'
 
 import { mediaConfigurationStyles } from '../styles/theme'
 import GlobalStyles from '../styles/GlobalStyles'
-import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
+
+import NProgress from 'nprogress'
+NProgress.configure({ showSpinner: false })
+
+Router.events.on('routeChangeStart', () => NProgress.start());
+Router.events.on('routeChangeComplete', () => NProgress.done());
+Router.events.on('routeChangeError', () => NProgress.done());
 
 export default function CreateAuctionHouseApp({
   Component,
@@ -40,10 +47,7 @@ export default function CreateAuctionHouseApp({
           networkId={process.env.NEXT_PUBLIC_NETWORK as NetworkIDs}
           style={mediaConfigurationStyles}
         >
-          <Header />
-          <main>
-            <Component {...pageProps} />
-          </main>
+          <Component {...pageProps} />
           <Footer />
         </MediaConfiguration>
       </Web3ConfigProvider>
