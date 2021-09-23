@@ -13,8 +13,8 @@ import {
 } from "@zoralabs/nft-hooks";
 
 export default function Home({ tokens }: { tokens: any }) {
-  const liveAuctions = tokens.filter(({nft}) => nft.auctionData)
-  const theRest = tokens.filter(t => !liveAuctions.includes(t))
+  const liveAuctions = tokens.filter(({ nft }: { nft: any }) => nft.auctionData)
+  const theRest = tokens.filter((t:any) => !liveAuctions.includes(t))
 
   const archive = tokens
 
