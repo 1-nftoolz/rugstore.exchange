@@ -10,19 +10,22 @@ export const AuctionsList = ({ tokens }: { tokens: any[] }) => {
       {tokens &&
         tokens.map((token) => {
           const tokenInfo = FetchStaticData.getIndexerServerTokenInfo(token);
+          const listed = token && token.nft.auctionData && token.nft.auctionData.approved;
           return (
-            <NFTPreview
-              initialData={token}
-              key={tokenInfo.tokenId}
-              id={tokenInfo.tokenId}
-              contract={tokenInfo.tokenContract}
-              onClick={(evt) =>
-                router.push(
-                  `/token/${tokenInfo.tokenContract}/${tokenInfo.tokenId}`
+            <div className={`thumbnail-wrapper ${!listed ? "not-listed" : ""}`}>
+              <NFTPreview
+                initialData={token}
+                key={tokenInfo.tokenId}
+                id={tokenInfo.tokenId}
+                contract={tokenInfo.tokenContract}
+                onClick={(evt) =>
+                  router.push(
+                    `/token/${tokenInfo.tokenContract}/${tokenInfo.tokenId}`
                 )
-              }
-              useBetaIndexer={true}
-            />
+                }
+                useBetaIndexer={true}
+                />
+                </div>
           );
         })}
     </div>

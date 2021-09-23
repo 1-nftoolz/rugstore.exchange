@@ -18,7 +18,8 @@ export default function GlobalStyles() {
 
           /* FONTS */
           --font-a: Helvetica, Arial, sans-serif;
-          --font-b: Courier, monospace;
+          --font-b: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
+
           
           /* SPACING */
           --base-unit: 8px;
@@ -29,7 +30,7 @@ export default function GlobalStyles() {
           /* TYPOGRAPHY */
           --text-01: calc(var(--base-unit) * 1.5);
           --text-02: calc(var(--base-unit) * 2);
-          --text-03: calc(var(--base-unit) * 3);
+          --text-03: calc(var(--base-unit) * 1.5);
           --text-04: calc(var(--base-unit) * 4);
           --text-05: calc(var(--base-unit) * 5);
 
@@ -126,8 +127,14 @@ export default function GlobalStyles() {
         }
 
         /* CUSTOM */
-        .button {
+        .zora-fullProofLink.zora-fullProofLink.zora-fullProofLink,
+        .zora-button.zora-button.zora-button,
+        .button.button.button {
           ${buttonStyle};
+        }
+
+        .zora-infoContainer {
+          min-width: 58rem; 
         }
 
         /* ZORA SPECIFIC -- CLEAN UP
@@ -170,10 +177,34 @@ export default function GlobalStyles() {
           text-align: center;
         }
 
+        h2 {
+          text-transform: uppercase;
+        }
+
+        .zora-fullCreatorOwnerSection.zora-fullCreatorOwnerSection.zora-fullCreatorOwnerSection {
+          border: 1px solid rgba(40,40,40,1);
+          padding: 20px 0 0;
+        }
+
+        .zora-fullOwnerAddress.zora-fullOwnerAddress.zora-fullOwnerAddress {
+          border: 1px solid rgba(40,40,40,1);
+          padding: 20px;
+          margin-top: 10px;
+        }
+
         .zora--auction-house-modalInner.zora--auction-house-modalInner.zora--auction-house-modalInner {
           background: #000;
           color: #fff;
           padding: 30px;
+        }
+        .zora-cardAuctionPricing.zora-cardAuctionPricing.zora-cardAuctionPricing {
+          color: #000;
+          background-color: #0ff;
+          border-top: 0;
+          margin-left: -30px;
+          margin-right: -30px;
+          border-top: 1px solid rgba(40,40,40,1);
+          padding: 20px;
         }
         .zora-cardItemInfo.zora-cardItemInfo.zora-cardItemInfo {
           margin-top: 16px;
@@ -183,6 +214,21 @@ export default function GlobalStyles() {
         .list-component-wrapper.list-component-wrapper {
           padding-top: 16px;
           padding-bottom: 16px;
+        }
+
+        .not-listed {
+          opacity: 0.5;
+        }
+
+        .zora-fullPlaceOfferButton.zora-fullPlaceOfferButton.zora-fullPlaceOfferButton .zora-button {
+          background-color: #0ff;
+          font-size: 1.2em;
+          padding: 20px 60px;
+        }
+
+        .not-listed .zora-cardAuctionPricing.zora-cardAuctionPricing.zora-cardAuctionPricing {
+          background: transparent;
+          color: #fff;
         }
 
         .zora-cardItemInfo * {
@@ -202,6 +248,13 @@ export default function GlobalStyles() {
           border-radius: 3px;
           box-shadow: 0 0 30px rgba(70,70,70,1);
           margin: 32px;
+          padding: 30px 30px 0;
+          position: relative;
+        }
+        .zora-cardLink.zora-cardLink.zora-cardLink {
+          cursor: pointer;
+          top: 0;
+          left: 0;
         }
       `}
     />

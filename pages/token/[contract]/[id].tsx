@@ -13,7 +13,6 @@ import Head from "../../../components/head";
 const styles = {
   theme: {
     lineSpacing: 24,
-    linkColor: "var(--black)",
   },
 };
 

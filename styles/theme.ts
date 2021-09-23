@@ -69,6 +69,8 @@ export const mediaConfigurationStyles = {
       font-family: var(--font-b)!important;
       text-transform: uppercase;
       font-size: var(--text-03);
+      margin-bottom: 4px;
+      opacity: 0.6;
     `,
     infoContainer: () => css`
       padding: var(--space-sm);

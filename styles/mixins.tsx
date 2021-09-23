@@ -77,11 +77,12 @@ export const buttonStyle = css`
   background-color: var(--white);
   margin: 0 auto;
   position: relative;
-  display: block;
-  padding: var(--base-unit) var(--space-md);
+  display: inline-block;
+  padding: 16px 40px;
   font-size: var(--text-01);
   border-radius: 50rem;
   text-align: center;
+  text-transform: uppercase;
   ${media.hover`
     background-color: rgb(0,255,255);
     color: var(--black);
