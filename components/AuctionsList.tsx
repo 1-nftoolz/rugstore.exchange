@@ -20,8 +20,8 @@ export const AuctionsList = ({ tokens }: { tokens: any[] }) => {
                 contract={tokenInfo.tokenContract}
                 onClick={(evt) =>
                   router.push(
-                    listed ? `/token/${tokenInfo.tokenContract}/${tokenInfo.tokenId}` : `/list`
-                )
+                    `/token/${tokenInfo.tokenContract}/${tokenInfo.tokenId}`
+                  )
                 }
                 useBetaIndexer={true}
               />
