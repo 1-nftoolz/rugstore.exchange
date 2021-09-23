@@ -26,7 +26,7 @@ const TokenThumbnail = ({
   const listed = token.auctions && token.auctions.length > 0;
   const router = useRouter();
   const linkTarget = listed ? `/${token.address}/${token.tokenId}` : "/list";
-  
+
   const wrapperLink = linkDetails
     ? {
         onClick: (evt: SyntheticEvent) => {
@@ -89,6 +89,7 @@ export default function Home({ tokens }: { tokens: any }) {
   return (
     <IndexWrapper>
       <Head />
+      <img style={{ maxWidth: '60px', margin: '0 auto', display: 'block', imageRendering: 'pixelated' }} src="https://lh3.googleusercontent.com/YEUUTJGMJQk7eggDXPKSXmGTfQcLR82sDdhg3pTPuozErMZpLx_FDOJBMfqnziZ_mfuHrInMqs2vQ6jxpq4Y7JJgemMBzsGpEfmd=s0" />
       <h1>{process.env.NEXT_PUBLIC_APP_TITLE}</h1>
       <CustomAuctionsList tokens={tokens} />
     </IndexWrapper>
