@@ -88,7 +88,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
   return {
     props: {
       id,
-      name: tokenInfo.metadata?.name || null,
+      name: `${tokenInfo.metadata?.name} #${tokenInfo.tokenId}` || null,
       description: tokenInfo.metadata?.description || null,
       image: tokenInfo.image || null,
       initialData: data,

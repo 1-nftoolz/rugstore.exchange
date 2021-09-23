@@ -324,6 +324,9 @@ export default function GlobalStyles() {
         .zora-fullPage .zora-fullMediaWrapper.zora-fullMediaWrapper {
           display: none;
         }
+        .zora-cardMediaWrapper.zora-cardMediaWrapper {
+          pointer-events: none;
+        }
       `}
     />
   )
