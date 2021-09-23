@@ -16,8 +16,6 @@ export default function Home({ tokens }: { tokens: any }) {
   const liveAuctions = tokens.filter(({ nft }: { nft: any }) => nft.auctionData)
   const theRest = tokens.filter((t:any) => !liveAuctions.includes(t))
 
-  console.log(liveAuctions)
-
   const archive = tokens
 
   return (
