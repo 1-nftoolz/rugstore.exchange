@@ -113,7 +113,9 @@ const RenderOwnedList = ({ account }: { account: string }) => {
         key={`${tokenInfo.tokenContract}-${tokenInfo.tokenId}`}
       >
         <div className="owned-list-item">
-          <PreviewComponents.MediaThumbnail />
+          <div className="zoraCardPad">
+            <PreviewComponents.MediaThumbnail />
+          </div>
           <div className="list-component-wrapper">
             <ListItemComponent />
           </div>
@@ -138,7 +140,9 @@ const MediaThumbnailPreview = ({
       useBetaIndexer={true}
     >
       <div className="owned-list-item">
-        <PreviewComponents.MediaThumbnail />
+        <div className="zoraCardPad">
+          <PreviewComponents.MediaThumbnail />
+        </div>
         <div className="list-component-wrapper">
           <ListItemComponent />
         </div>

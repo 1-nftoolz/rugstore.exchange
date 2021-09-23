@@ -165,14 +165,21 @@ export default function GlobalStyles() {
         }
         /* QUICK 'N' DIRTY OVERRIDES
         */
-        .zora--auction-house-modalInner {
-          color: #000;
+        .zora--auction-house-modalInner.zora--auction-house-modalInner.zora--auction-house-modalInner {
+          background: #000;
+          color: #fff;
+          padding: 30px;
         }
         .zora-cardItemInfo.zora-cardItemInfo.zora-cardItemInfo {
           margin-top: 16px;
           padding-top: 16px;
           border-top: 1px solid rgba(160,160,160,1);
         }
+        .list-component-wrapper.list-component-wrapper {
+          padding-top: 16px;
+          padding-bottom: 16px;
+        }
+
         .zora-cardItemInfo * {
           font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
           font-size: 0.9rem;
