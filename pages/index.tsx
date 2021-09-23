@@ -25,8 +25,12 @@ export default function Home({ tokens }: { tokens: any }) {
       <h1>{process.env.NEXT_PUBLIC_APP_TITLE}</h1>
       <h2>Live now</h2>
       <AuctionsList tokens={liveAuctions} />
-      <h2>Ended</h2>
-      <AuctionsList tokens={liveAuctions} />
+      {false && 
+        <>
+          <h2>Ended</h2>
+          <AuctionsList tokens={liveAuctions} />
+        </>
+      }
       <h2>Rug archive</h2>
       <AuctionsList tokens={archive} />
     </IndexWrapper>
