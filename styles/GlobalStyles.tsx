@@ -304,6 +304,25 @@ export default function GlobalStyles() {
         .zora-fullInfoProofAuthenticityContainer.zora-fullInfoProofAuthenticityContainer {
           grid-template-columns: 1fr 1fr;
         }
+        .rug-view-wrap {
+          position: relative;
+        }
+        .rug-view-wrap:before {
+          content: '';
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+          z-index: 1;
+        }
+        .rug-view {
+          width: 100%;
+          height: 70vh;
+        }
+        .zora-fullPage .zora-fullMediaWrapper.zora-fullMediaWrapper {
+          display: none;
+        }
       `}
     />
   )

@@ -45,6 +45,12 @@ export default function Piece({
         style={styles}
       >
         <h1> RUG #{initialData.nft.tokenData.tokenId}</h1>
+        <div className="rug-view-wrap">
+          <iframe
+            className="rug-view"
+            src={"https://sharp-allen-827c1c.netlify.app/?rug="+initialData.nft.tokenData.tokenId}
+          />
+        </div>
         <PageWrapper>
           <NFTFullPage
             useBetaIndexer={true}
