@@ -21,10 +21,10 @@ const Head = ({ title, description, url, ogImage }: HeadProps) => (
     <meta name="description" content={description || defaultDescription} />
     <link rel="icon" type="image/png" sizes="24x24" href={favicon} />
     <meta property="og:url" content={url || defaultOGURL} />
-    <meta property="og:title" content={title || ''} />
+    <meta property="og:title" content={title ? `${title} | ${defaultTitle}` : defaultTitle} />
     <meta property="og:description" content={description || defaultDescription} />
     <meta name="twitter:site" content={url || defaultOGURL} />
-    <meta name="twitter:text:title" content={title || ''} />
+    <meta name="twitter:text:title" content={title ? `${title} | ${defaultTitle}` : defaultTitle} />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:image" content={ogImage || defaultOGImage} />
     <meta property="og:image" content={ogImage || defaultOGImage} />
