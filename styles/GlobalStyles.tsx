@@ -165,6 +165,11 @@ export default function GlobalStyles() {
         }
         /* QUICK 'N' DIRTY OVERRIDES
         */
+        header a {
+          min-width: 80px;
+          text-align: center;
+        }
+
         .zora--auction-house-modalInner.zora--auction-house-modalInner.zora--auction-house-modalInner {
           background: #000;
           color: #fff;
