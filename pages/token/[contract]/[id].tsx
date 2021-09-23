@@ -90,7 +90,7 @@ export const getServerSideProps: GetServerSideProps = async ({ params }) => {
       id,
       name: `${tokenInfo.metadata?.name} #${tokenInfo.tokenId}` || null,
       description: tokenInfo.metadata?.description || null,
-      image: tokenInfo.image || null,
+      image: tokenInfo.image ? tokenInfo.image.replace('ipfs://', 'https://gateway.pinata.cloud/ipfs/') : null,
       initialData: data,
     },
   };
