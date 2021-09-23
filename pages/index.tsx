@@ -53,12 +53,14 @@ const TokenThumbnail = ({
         }`}
         {...wrapperLink}
       >
-        <MediaThumbnailWrapper {...wrapperLink}>
-          <PreviewComponents.MediaThumbnail />
-          {token.auctions && token.auctions.length > 0 && (
-            <PreviewComponents.PricingComponent />
-          )}
-        </MediaThumbnailWrapper>
+          <MediaThumbnailWrapper {...wrapperLink}>
+            <div className="zoraCardPad">
+              <PreviewComponents.MediaThumbnail />
+            </div>
+            {token.auctions && token.auctions.length > 0 && (
+              <PreviewComponents.PricingComponent />
+            )}
+          </MediaThumbnailWrapper>
       </div>
     </NFTPreview>
   )
@@ -121,6 +123,7 @@ const IndexWrapper = styled(PageWrapper)`
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
     .thumbnail-wrapper {
       .zora-cardOuter {
         background: none;
@@ -128,7 +131,7 @@ const IndexWrapper = styled(PageWrapper)`
         margin: 0;
       }
       &.not-listed {
-        opacity: 0.5;
+        opacity: 0.35;
         .zora-cardLink:before {
           content: 'Own this? List It Here!'!important;
         }
@@ -155,14 +158,12 @@ const IndexWrapper = styled(PageWrapper)`
       `}
     }
     .zora-cardOuter {
-      background: none;
-      border: 0;
       display: flex;
       flex-direction: row;
       flex-wrap: wrap;
       justify-content: space-between;
       height: 100%;
-      width: 280px;
+      width: 360px;
 
       .zora-cardItemInfo {
         width: 100%;
