@@ -13,7 +13,6 @@ type HeadProps = {
   ogImage?: string
 }
 
-
 const Head = ({ title, description, url, ogImage }: HeadProps) => (
   <NextHead>
     <meta charSet="UTF-8" />
