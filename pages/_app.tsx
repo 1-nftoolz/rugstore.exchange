@@ -9,7 +9,6 @@ import { Web3ConfigProvider } from '@zoralabs/simple-wallet-provider'
 
 import { mediaConfigurationStyles } from '../styles/theme'
 import GlobalStyles from '../styles/GlobalStyles'
-import { Header } from '../components/Header'
 import { Footer } from '../components/Footer'
 
 export default function CreateAuctionHouseApp({
@@ -40,10 +39,7 @@ export default function CreateAuctionHouseApp({
           networkId={process.env.NEXT_PUBLIC_NETWORK as NetworkIDs}
           style={mediaConfigurationStyles}
         >
-          <Header />
-          <main>
-            <Component {...pageProps} />
-          </main>
+          <Component {...pageProps} />
           <Footer />
         </MediaConfiguration>
       </Web3ConfigProvider>

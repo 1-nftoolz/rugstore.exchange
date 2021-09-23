@@ -66,7 +66,7 @@ export default function GlobalStyles() {
           color: var(--white);
         }
         body * {
-          font-family: var(--font-a)!important;
+          font-family: var(--font-a);
         }
 
         main {
@@ -107,8 +107,9 @@ export default function GlobalStyles() {
           padding: var(--space-md) 0 var(--space-lg);
         }
         h2 {
-          font-size: var(--text-03);
-          padding: var(--space-sm) 0;
+          font-size: var(--text-02);
+          margin: var(--space-lg) 0 var(--space-sm);
+          text-align: center;
         }
         h3 {
           font-size: var(--text-03);

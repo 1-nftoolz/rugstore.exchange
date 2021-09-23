@@ -9,6 +9,8 @@ import { GetServerSideProps } from "next";
 
 import { PageWrapper } from "../../../styles/components";
 import Head from "../../../components/head";
+import { Header } from "../../../components/Header";
+import styled from "@emotion/styled";
 
 const styles = {
   theme: {
@@ -25,6 +27,15 @@ type PieceProps = {
 
 const APP_TITLE = process.env.NEXT_PUBLIC_APP_TITLE;
 
+const H1 = styled('h1')`
+width: 100%;
+padding: 3em 2em 0;
+background: #aaa;
+margin-bottom: -1em;
+z-index: 2;
+position: relative;
+`
+
 export default function Piece({
   name,
   description,
@@ -40,26 +51,29 @@ export default function Piece({
         description={description}
         ogImage={image}
       />
-      <MediaConfiguration
-        networkId={process.env.NEXT_PUBLIC_NETWORK_ID as NetworkIDs}
-        style={styles}
-      >
-        <h1> RUG #{initialData.nft.tokenData.tokenId}</h1>
-        <div className="rug-view-wrap">
-          <iframe
-            className="rug-view"
-            src={"https://sharp-allen-827c1c.netlify.app/?rug="+initialData.nft.tokenData.tokenId}
-          />
-        </div>
-        <PageWrapper>
-          <NFTFullPage
-            useBetaIndexer={true}
-            contract={query.contract as string}
-            id={query.id as string}
-            initialData={initialData}
-          />
-        </PageWrapper>
-      </MediaConfiguration>
+      <Header fixed />
+      <main>
+        <MediaConfiguration
+          networkId={process.env.NEXT_PUBLIC_NETWORK_ID as NetworkIDs}
+          style={styles}
+        >
+          <H1>RUG #{initialData.nft.tokenData.tokenId}</H1>
+          <div className="rug-view-wrap">
+            <iframe
+              className="rug-view"
+              src={"https://sharp-allen-827c1c.netlify.app/?rug="+initialData.nft.tokenData.tokenId}
+            />
+          </div>
+          <PageWrapper>
+            <NFTFullPage
+              useBetaIndexer={true}
+              contract={query.contract as string}
+              id={query.id as string}
+              initialData={initialData}
+            />
+          </PageWrapper>
+        </MediaConfiguration>
+      </main>
     </>
   );
 }
