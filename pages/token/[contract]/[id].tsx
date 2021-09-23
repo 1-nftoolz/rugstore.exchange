@@ -44,6 +44,7 @@ export default function Piece({
         networkId={process.env.NEXT_PUBLIC_NETWORK_ID as NetworkIDs}
         style={styles}
       >
+        <h1> RUG #{initialData.nft.tokenData.tokenId}</h1>
         <PageWrapper>
           <NFTFullPage
             useBetaIndexer={true}

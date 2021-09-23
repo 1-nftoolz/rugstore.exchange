@@ -104,6 +104,7 @@ export const mediaConfigurationStyles = {
       margin: 0;
       padding: 0 0 5px;
       margin-bottom: var(--space-sm);
+      font-size: var(--text-04);
       font-size: var(--text-01);
       border-bottom: 1px dotted var(--black);
       &:last-of-type {
@@ -114,7 +115,7 @@ export const mediaConfigurationStyles = {
         display: flex;
         flex-direction: column;
         padding-bottom: 1px;
-        font-size: var(--text-04);
+        font-size: var(--text-01);
         line-height: 1.2;
         * {
           margin: 0;
@@ -125,7 +126,6 @@ export const mediaConfigurationStyles = {
           flex-direction: row;
         `}
         ${mixins.media.laptop`
-          font-size: var(--text-01);
         `}
       }
     `,

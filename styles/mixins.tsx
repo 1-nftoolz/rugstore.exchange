@@ -78,7 +78,7 @@ export const buttonStyle = css`
   margin: 0 auto;
   position: relative;
   display: inline-block;
-  padding: 16px 40px;
+  padding: 14px 36px;
   font-size: var(--text-01);
   border-radius: 50rem;
   text-align: center;

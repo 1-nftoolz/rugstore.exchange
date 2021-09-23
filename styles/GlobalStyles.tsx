@@ -23,7 +23,7 @@ export default function GlobalStyles() {
 
           
           /* SPACING */
-          --base-unit: 8px;
+          --base-unit: 10px;
           --space-sm: calc(var(--base-unit) * 2);
           --space-md: calc(var(--base-unit) * 3);
           --space-lg: calc(var(--base-unit) * 5);
@@ -31,7 +31,7 @@ export default function GlobalStyles() {
           /* TYPOGRAPHY */
           --text-01: calc(var(--base-unit) * 1.5);
           --text-02: calc(var(--base-unit) * 2);
-          --text-03: calc(var(--base-unit) * 1.5);
+          --text-03: calc(var(--base-unit) * 1.2);
           --text-04: calc(var(--base-unit) * 4);
           --text-05: calc(var(--base-unit) * 5);
 
@@ -140,6 +140,21 @@ export default function GlobalStyles() {
           min-width: 58rem; 
         }
 
+        .zora-fullPageHistoryItemMeta.zora-fullPageHistoryItemMeta > *:first-child,
+        .zora-fullPageHistoryItemMeta.zora-fullPageHistoryItemMeta > *:first-child {
+          margin-right: 8px;
+        }
+
+        @media (max-width: 58rem) {
+          .zora-infoContainer {
+            min-width: 0;
+            width: 100%;
+          }
+          .zora-fullPageHistoryItem.zora-fullPageHistoryItem * {
+            text-align: left;
+          }
+        }
+
         /* ZORA SPECIFIC -- CLEAN UP
            - WALLET MODAL
         */
@@ -184,6 +199,22 @@ export default function GlobalStyles() {
           text-transform: uppercase;
         }
 
+        .zora-fullPageDataGrid.zora-fullPageDataGrid {
+          margin-top: 60px;
+          padding-top: 30px;
+        }
+
+        .zora-fullPageDataGrid.zora-fullPageDataGrid:before {
+          content: '';
+          border-top: 1px solid rgba(40,40,40,1);
+          position: absolute;
+          left: 0;
+          width: 200vw;
+          margin-left: -100vw;
+          margin-top: -30px;
+        }
+
+
         .zora-fullCreatorOwnerSection.zora-fullCreatorOwnerSection.zora-fullCreatorOwnerSection {
           border: 1px solid rgba(40,40,40,1);
           padding: 20px 0 0;
@@ -207,7 +238,7 @@ export default function GlobalStyles() {
           margin-left: -30px;
           margin-right: -30px;
           border-top: 1px solid rgba(40,40,40,1);
-          padding: 20px;
+          padding: 20px 40px;
         }
         .zora-cardItemInfo.zora-cardItemInfo.zora-cardItemInfo {
           margin-top: 16px;
