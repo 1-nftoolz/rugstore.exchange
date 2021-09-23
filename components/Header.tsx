@@ -13,7 +13,14 @@ export const Header = ({ fixed }: { fixed?: boolean }) => {
       `}>
         <div>
           <NavLink passHref href="/">
-              <a className="logo">{process.env.NEXT_PUBLIC_APP_TITLE}</a>
+              <a className="logo">
+                <span>
+                  {process.env.NEXT_PUBLIC_APP_TITLE}
+                </span>
+                <span>
+                  Rugs
+                </span>
+              </a>
             </NavLink>
         </div>
         <div css={css`
@@ -22,7 +29,7 @@ export const Header = ({ fixed }: { fixed?: boolean }) => {
           transform: translateX(-50%);
         `}>
           <NavLink passHref href="/list">
-            <a>List a Rug</a>
+            <a>List your Rug</a>
           </NavLink>
         </div>
         <div>

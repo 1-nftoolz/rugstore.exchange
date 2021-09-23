@@ -180,6 +180,19 @@ export default function GlobalStyles() {
 
 
         /* CUSTOM */
+        .logo span:last-child {
+          display: none;
+        }
+
+        @media (max-width: 768px) {
+          .logo span:first-child {
+            display: none;
+          }
+          .logo span:last-child {
+            display: block;
+          }
+        }
+
         .zora-fullProofLink.zora-fullProofLink.zora-fullProofLink,
         .zora-button.zora-button.zora-button,
         .button.button.button {
