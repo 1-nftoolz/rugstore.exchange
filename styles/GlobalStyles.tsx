@@ -14,7 +14,8 @@ export default function GlobalStyles() {
           --overlay: rgba(0, 0, 0, 0.85);
           --overlay-light: rgba(0, 0, 0, 0.35);
           --border-black: 1px solid var(--black);
-          --border-light: 1px solid #dbdbdb;
+          --border-light: 1px solid rgba(40,40,40,1);
+
 
           /* FONTS */
           --font-a: Helvetica, Arial, sans-serif;
@@ -131,6 +132,8 @@ export default function GlobalStyles() {
         .zora-button.zora-button.zora-button,
         .button.button.button {
           ${buttonStyle};
+          display: block;
+          margin: 0 auto;
         }
 
         .zora-infoContainer {
@@ -220,6 +223,15 @@ export default function GlobalStyles() {
           opacity: 0.5;
         }
 
+        .zora-infoContainer ol {
+          border-bottom: 1px solid rgba(40,40,40,1);
+        }
+        .zora-infoContainer ol li {
+          border-top: 1px solid rgba(40,40,40,1);
+          margin-top: 10px;
+          padding-top: 20px;
+        }
+
         .zora-fullPlaceOfferButton.zora-fullPlaceOfferButton.zora-fullPlaceOfferButton .zora-button {
           background-color: #0ff;
           font-size: 1.2em;
@@ -231,6 +243,7 @@ export default function GlobalStyles() {
           color: #fff;
         }
 
+        .zora-textSubdued.zora-textSubdued.zora-textSubdued,
         .zora-cardItemInfo * {
           font-family: Consolas, "Andale Mono WT", "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", Monaco, "Courier New", Courier, monospace !important;
           font-size: 0.9rem;
@@ -248,13 +261,17 @@ export default function GlobalStyles() {
           border-radius: 3px;
           box-shadow: 0 0 30px rgba(70,70,70,1);
           margin: 32px;
-          padding: 30px 30px 0;
+          padding: 20px 20px 0;
           position: relative;
+          width: 360px;
         }
         .zora-cardLink.zora-cardLink.zora-cardLink {
           cursor: pointer;
           top: 0;
           left: 0;
+        }
+        .zora-fullInfoProofAuthenticityContainer.zora-fullInfoProofAuthenticityContainer {
+          grid-template-columns: 1fr 1fr;
         }
       `}
     />

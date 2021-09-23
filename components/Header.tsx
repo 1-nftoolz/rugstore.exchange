@@ -15,7 +15,7 @@ export const Header = () => {
           <a>Auctions</a>
         </NavLink>
         <NavLink passHref href="/list">
-          <a>List</a>
+          <a>List Rug</a>
         </NavLink>
         <NavLink passHref href="/about">
           <a>About</a>
