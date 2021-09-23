@@ -16,6 +16,8 @@ export default function Home({ tokens }: { tokens: any }) {
   const liveAuctions = tokens.filter(({ nft }: { nft: any }) => nft.auctionData)
   const theRest = tokens.filter((t:any) => !liveAuctions.includes(t))
 
+  console.log(liveAuctions)
+
   const archive = tokens
 
   return (
@@ -32,7 +34,7 @@ export default function Home({ tokens }: { tokens: any }) {
         </>
       }
       <h2>Rug archive</h2>
-      <AuctionsList tokens={archive} />
+      <AuctionsList tokens={theRest} />
     </IndexWrapper>
   );
 }
