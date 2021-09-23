@@ -103,6 +103,7 @@ export default function GlobalStyles() {
           font-size: var(--text-05);
           line-height: 1;
           text-align: center;
+          word-break: break-word;
           padding: var(--space-md) 0 var(--space-lg);
         }
         h2 {
