@@ -173,7 +173,7 @@ export default function GlobalStyles() {
         .zora-cardItemInfo.zora-cardItemInfo.zora-cardItemInfo {
           margin-top: 16px;
           padding-top: 16px;
-          border-top: 1px solid rgba(160,160,160,1);
+          border-top: 1px solid rgba(40,40,40,1);
         }
         .list-component-wrapper.list-component-wrapper {
           padding-top: 16px;
@@ -193,9 +193,9 @@ export default function GlobalStyles() {
         }
         .zora-cardOuter.zora-cardOuter.zora-cardOuter {
           background: var(--black);
-          border: 1px solid rgba(160,160,160,1);
+          border: 1px solid rgba(40,40,40,1);
           border-radius: 3px;
-          box-shadow: 0 0 30px rgba(120,120,120,1);
+          box-shadow: 0 0 30px rgba(70,70,70,1);
           margin: 32px;
         }
       `}
