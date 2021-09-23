@@ -4,19 +4,20 @@ import { PageWrapper } from "../styles/components";
 import { Header } from "../components/Header";
 import { GetStaticProps } from "next";
 import { AuctionsList } from "../components/AuctionsList";
-import sortBy from 'lodash/sortBy'
+import { RugArchive } from '../components/RugArchive';
 
 import {
   FetchStaticData,
   MediaFetchAgent,
   NetworkIDs,
 } from "@zoralabs/nft-hooks";
+import { sortBy } from "lodash";
 
 export default function Home({ tokens }: { tokens: any }) {
   const liveAuctions = tokens.filter(({ nft }: { nft: any }) => nft.auctionData)
   const theRest = tokens.filter((t:any) => !liveAuctions.includes(t))
 
-  const archive = tokens
+  const archive = sortBy(tokens, t => parseInt(t.nft.tokenData.tokenId))
 
   return (
     <IndexWrapper>
@@ -32,7 +33,7 @@ export default function Home({ tokens }: { tokens: any }) {
         </>
       }
       <h2>Rug archive</h2>
-      <AuctionsList tokens={theRest} />
+      <RugArchive tokens={archive} />
     </IndexWrapper>
   );
 }
