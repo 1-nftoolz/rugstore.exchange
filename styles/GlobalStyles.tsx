@@ -391,6 +391,10 @@ export default function GlobalStyles() {
         .zora-cardMediaWrapper.zora-cardMediaWrapper {
           pointer-events: none;
         }
+        .zora-wallet-modalText {
+          max-height: 100vh;
+          overflow: auto;
+        }
         .head-data {
           display: grid;
           gap: 60px;

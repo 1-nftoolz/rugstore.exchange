@@ -18,9 +18,9 @@ export default function Home({ tokens }: { tokens: any }) {
   const theRest = tokens.filter((t:any) =>
     !liveAuctions.includes(t))
 
-  const floor = Math.min.apply(Math, liveAuctions.map((a) =>
+  const floor = Math.min.apply(Math, liveAuctions.map((a:any) =>
     a.nft.auctionData.reservePrice))
-  const ceiling = Math.max.apply(Math, liveAuctions.map((a) =>
+  const ceiling = Math.max.apply(Math, liveAuctions.map((a:any) =>
     a.nft.auctionData.reservePrice))
 
   //const archive = tokens
@@ -30,7 +30,7 @@ export default function Home({ tokens }: { tokens: any }) {
       <Head />
       <Header />
       <h1>{process.env.NEXT_PUBLIC_APP_TITLE}</h1>
-      <div class="head-data">
+      <div className="head-data">
         <div>
           <h2>{parseFloat((floor / (10 ** 18)).toFixed(4))} ETH</h2>
           <p className="zora-textSubdued">Floor</p>
