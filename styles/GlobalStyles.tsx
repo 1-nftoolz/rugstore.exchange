@@ -33,7 +33,7 @@ export default function GlobalStyles() {
           --text-02: calc(var(--base-unit) * 2);
           --text-03: calc(var(--base-unit) * 1.2);
           --text-04: calc(var(--base-unit) * 4);
-          --text-05: calc(var(--base-unit) * 5);
+          --text-05: calc(var(--base-unit) * 7);
 
           /* LAYOUT */
           --header-z: 100;
@@ -360,6 +360,8 @@ export default function GlobalStyles() {
           padding: 20px 20px 0;
           position: relative;
           width: 360px;
+          max-width: 100%;
+          box-sizing: border-box;
         }
         .zora-cardLink.zora-cardLink.zora-cardLink {
           cursor: pointer;
@@ -397,7 +399,7 @@ export default function GlobalStyles() {
         }
         .head-data {
           display: grid;
-          gap: 60px;
+          gap: 7vw;
           grid-auto-flow: column;
           justify-content: center;
           width: 100%;
