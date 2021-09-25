@@ -391,6 +391,23 @@ export default function GlobalStyles() {
         .zora-cardMediaWrapper.zora-cardMediaWrapper {
           pointer-events: none;
         }
+        .head-data {
+          display: grid;
+          gap: 60px;
+          grid-auto-flow: column;
+          justify-content: center;
+          width: 100%;
+          text-align: center;
+        }
+        .head-data p {
+          opacity: 0.6;
+          padding-bottom: 0;
+        }
+        .head-data h2 {
+          margin-bottom: 0.2em;
+          margin-top: 0;
+          padding-bottom: 0;
+        }
       `}
     />
   )

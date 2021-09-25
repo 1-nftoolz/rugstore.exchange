@@ -13,16 +13,33 @@ import {
 } from "@zoralabs/nft-hooks";
 
 export default function Home({ tokens }: { tokens: any }) {
-  const liveAuctions = tokens.filter(({ nft }: { nft: any }) => nft.auctionData)
-  const theRest = tokens.filter((t:any) => !liveAuctions.includes(t))
+  const liveAuctions = tokens.filter(({ nft }: { nft: any }) =>
+    nft.auctionData)
+  const theRest = tokens.filter((t:any) =>
+    !liveAuctions.includes(t))
 
-  const archive = tokens
+  const floor = Math.min.apply(Math, liveAuctions.map((a) =>
+    a.nft.auctionData.reservePrice))
+  const ceiling = Math.max.apply(Math, liveAuctions.map((a) =>
+    a.nft.auctionData.reservePrice))
+
+  //const archive = tokens
 
   return (
     <IndexWrapper>
       <Head />
       <Header />
       <h1>{process.env.NEXT_PUBLIC_APP_TITLE}</h1>
+      <div class="head-data">
+        <div>
+          <h2>{parseFloat((floor / (10 ** 18)).toFixed(4))} ETH</h2>
+          <p className="zora-textSubdued">Floor</p>
+        </div>
+        <div>
+          <h2>{parseFloat((ceiling / (10 ** 18)).toFixed(4))} ETH</h2>
+          <p className="zora-textSubdued">Ceiling</p>
+        </div>
+      </div>
       <h2>Live now</h2>
       <AuctionsList tokens={liveAuctions} />
       {false && 
