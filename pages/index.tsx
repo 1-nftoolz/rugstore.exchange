@@ -45,6 +45,14 @@ export default function Home({ tokens }: { tokens: any }) {
           <h2>{parseFloat((ceiling / (10 ** 18)).toFixed(4))} ETH</h2>
           <p className="zora-textSubdued">Ceiling</p>
         </div>
+        <div>
+          <h2>{(''+liveAuctions.length).padStart(2, '0')}</h2>
+          <p className="zora-textSubdued">Live Auctions</p>
+        </div>
+        <div>
+          <h2>{(''+endedAuctions.length).padStart(2, '0')}</h2>
+          <p className="zora-textSubdued">Auction ended</p>
+        </div>
       </div>
       <h2>Live now</h2>
       <AuctionsList tokens={liveAuctions} />
