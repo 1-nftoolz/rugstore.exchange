@@ -14,9 +14,15 @@ import {
 
 export default function Home({ tokens }: { tokens: any }) {
   const liveAuctions = tokens.filter(({ nft }: { nft: any }) =>
-    nft.auctionData)
+    nft.auctionData && !nft.auctionData.finalizedAtTimestamp
+  ).sort((a:any, b:any) =>
+    parseInt(a.nft.auctionData.reservePrice) > parseInt(b.nft.auctionData.reservePrice) ? 1 : -1)
+
+  const endedAuctions = tokens.filter(({ nft }: { nft: any }) =>
+    nft.auctionData && nft.auctionData.finalizedAtTimestamp)
+
   const theRest = tokens.filter((t:any) =>
-    !liveAuctions.includes(t))
+    !liveAuctions.includes(t) && !endedAuctions.includes(t))
 
   const floor = Math.min.apply(Math, liveAuctions.map((a:any) =>
     a.nft.auctionData.reservePrice))
@@ -42,12 +48,8 @@ export default function Home({ tokens }: { tokens: any }) {
       </div>
       <h2>Live now</h2>
       <AuctionsList tokens={liveAuctions} />
-      {false && 
-        <>
-          <h2>Ended</h2>
-          <AuctionsList tokens={liveAuctions} />
-        </>
-      }
+      <h2>Ended</h2>
+      <AuctionsList tokens={endedAuctions} />
       <h2>Rug archive</h2>
       <AuctionsList tokens={theRest} />
     </IndexWrapper>
